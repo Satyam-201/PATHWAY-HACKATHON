@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+app:
+build: .
+ports:
+  - "8000:8000"
+volumes:
+  - .:/app
+environment:
+  - PATHWAY_API_KEY=${PATHWAY_API_KEY}
+  - DEBUG=True
